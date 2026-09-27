@@ -1,21 +1,25 @@
-# Adonia QGIS Map — Folder Guide (cleaned up 2026-09-26)
+# Adonia QGIS Map — Folder Guide (cleaned up 2026-09-26, git-connected 2026-09-27)
+
+**GitHub:** https://github.com/adonia-project/map (branch `main`)
 
 ## Where the countries are
-**`countries/`** — THE canonical country data. One GPKG per country, named `CONTINENT — NAME.gpkg`.
+**`countries/`** — THE canonical country data. **One folder per country**, each containing its GPKG: `countries/{Continent}/{Continent — Country}/{Continent — Country}.gpkg`
+
+Country folders are the workspace for everything about that country — drop renders, layouts, and exports alongside the GPKG as you build individual maps.
 
 | Subfolder | Countries | Notes |
 |---|---|---|
-| `Abyala/` | 9 | Abyala — Asikyira, Balboa, Balisca, Eberá, Haramara, Lacashe, Potocsí, Tapuya + Balisca_Fixed.gpkg |
-| `Almuria/` | 2 | Almuria — Pakiak, Volistraya |
-| `Arktici/` | 1 | Arktici.gpkg (polar continent, single-layer) |
-| `Fosia/` | 45 | Fosia — Okaiken, Zong, Yanbaru, Nakamizu, Dagit, Vaiahi Islands, etc. |
-| `Illypnia/` | 60 | Illypnia — Varkana, Breisland, Echia, Gallia, Mercia, etc. |
-| `Kaftia/` | 72 | Kaftia — Alwana, Dakare, Tamazgha, Wolffrea, etc. |
-| `Lurandia/` | 15 | Lurandia — Markland, Louyang, Kavik, Kawaldipa, Tecala, United Midlands, etc. |
-| `Sanrobonia/` | 1 | Sanrobonia.gpkg (single-layer) |
-| `Shendan_Ocean/` | 1 | Shendan_Ocean.gpkg (single-layer) |
+| `Abyala/` | 8 | Asikyira, Balboa, Balisca, Eberá, Haramara, Lacashe, Potocsí, Tapuya |
+| `Almuria/` | 2 | Pakiak, Volistraya |
+| `Arktici/` | 1 | Arktici (polar continent, single-layer) |
+| `Fosia/` | 45 | Okaiken, Zong, Yanbaru, Nakamizu, Dagit, Vaiahi Islands, etc. |
+| `Illypnia/` | 60 | Varkana, Breisland, Echia, Gallia, Mercia, etc. |
+| `Kaftia/` | 72 | Alwana, Dakare, Tamazgha, Wolffrea, etc. |
+| `Lurandia/` | 15 | Markland, Louyang, Kavik, Kawaldipa, Tecala, United Midlands, etc. |
+| `Sanrobonia/` | 1 | Sanrobonia (single-layer) |
+| `Shendan_Ocean/` | 1 | Shendan_Ocean (single-layer) |
 
-**Total: 206 authoritative country GPKGs** (202 split from merged masters + 4 single-layer continents + Balisca_Fixed)
+**Total: 205 authoritative country GPKGs**, each in its own folder.
 
 ## Other active files (root)
 - `ADONIA QGIS.qgz` — main QGIS project (Windows). Layers reference the canonical GPKGs in `countries/`.
@@ -36,7 +40,8 @@
 - Misc: `DATA SAVE .csv`, `.qmd` style files, stray `.aux.xml`/`.points` files
 
 ## Rule of thumb going forward
-- Add new countries → create new GPKG in `countries/{Continent}/` named `CONTINENT — NAME.gpkg`
-- Edit existing countries → edit the per-country GPKG directly
-- After editing, refresh `adonia_countries_gpkg.zip` so the Mac stays in sync
-- Old stuff → `OLD/`, never mixed into the root
+- Add new countries → new folder `countries/{Continent}/{Continent — Name}/` with the GPKG inside
+- Edit existing countries → edit the GPKG in its country folder; per-country map assets (renders, layouts, exports) go in the same folder
+- Commit + push when done: `git add -A && git commit -m "..." && git push`
+- Old stuff → `OLD/` (gitignored), never mixed into the root
+- The Mac syncs via the `adonia_countries_gpkg.zip` snapshot (gitignored) — refresh it after big changes
