@@ -1,0 +1,17 @@
+# Archived / superseded data — not part of the repo
+OLD/
+
+# Mac sync snapshot (regenerated from countries/)
+adonia_countries_gpkg.zip
+
+# QGIS/GDAL sidecar junk
+*.aux.xml
+*.points
+*.qmd~
+*.gpkg-wal
+*.gpkg-shm
+*.bak
+
+# Thumbs / OS
+Thumbs.db
+.DS_Store
