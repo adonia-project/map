@@ -35,7 +35,7 @@ def table_areas(text):
     return out
 
 tables = {}
-for cont in ("Kaftia","Illypnia","Abyala","Lurandia","Fosia","Almuria","Shendan_Ocean","Arktici"):
+for cont in ("Kaftia","Illypnia","Abyala","Lurandia","Fosia","Almuria","Shendan_Ocean","Borealia"):
     try:
         rev, text = pull(cont)
         ta = table_areas(text)

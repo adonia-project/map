@@ -9,9 +9,9 @@ Country folders are the workspace for everything about that country — drop ren
 
 | Subfolder | Countries | Notes |
 |---|---|---|
-| `Abyala/` | 8 | Asikyira, Balboa, Balisca, Eberá, Haramara, Lacashe, Potocsí, Tapuya |
+| `Abyala/` | 9 | Aina'akea, Asikyira, Balboa, Balisca, Eberá, Haramara, Lacashe, Potocsí, Tapuya |
 | `Almuria/` | 2 | Pakiak, Volistraya |
-| `Arktici/` | 1 | Arktici (polar continent, single-layer) |
+| `Borealia/` | 1 | Borealia (polar continent, single-layer) |
 | `Fosia/` | 45 | Okaiken, Zong, Yanbaru, Nakamizu, Dagit, Vaiahi Islands, etc. |
 | `Illypnia/` | 60 | Varkana, Breisland, Echia, Gallia, Mercia, etc. |
 | `Kaftia/` | 72 | Alwana, Dakare, Tamazgha, Wolffrea, etc. |
