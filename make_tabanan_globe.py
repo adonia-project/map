@@ -18,7 +18,7 @@ TARGET = "Tabanan"
 CENTER_LON, CENTER_LAT = 136.89, 15.90  # Tabanan centroid
 OUT_SVG = r'B:\02_GIT CONNECTED\map\Location of Tabanan.svg'
 OUT_PNG = r'B:\02_GIT CONNECTED\map\Location of Tabanan.png'
-HIGHLIGHT = '#b0532e'  # terracotta
+HIGHLIGHT = '#3f8f4f'  # house green (matches Location of Aina'akea/Louyang/Ntungwe/Faanhou)
 
 files = glob.glob(r'B:\02_GIT CONNECTED\map\countries\*\*\*.gpkg') + \
         glob.glob(r'B:\02_GIT CONNECTED\map\countries\*\*.gpkg')

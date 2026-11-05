@@ -38,7 +38,7 @@ def sat(rgb):
     mx, mn = max(rgb), min(rgb)
     return (mx-mn)
 best = max(cols[:12], key=lambda t: sat(t[1]))
-HIGHLIGHT = '#%02x%02x%02x' % best[1]
+HIGHLIGHT = '#3f8f4f'  # house green (override flag sampling - house convention)
 print('flag top colors:', [(n, '#%02x%02x%02x' % rgb) for n, rgb in cols[:5]], '| highlight:', HIGHLIGHT)
 
 files = glob.glob(r'B:\02_GIT CONNECTED\map\countries\*\*\*.gpkg') + \
